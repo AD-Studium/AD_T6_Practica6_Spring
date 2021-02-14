@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="Ana Abel" class="es.studium.spring.Alumnos">
+		<property name="nombreAlumno" value="Ana Abel"></property>
+		<property name="direccionAlumno" value="Paseo de América, 15"></property>
+		<property name="numeroMatricula" value="1"></property>
+		<property name="notaAsignatura" value="7"></property>
+		<property name="horasAsignatura" value="1"></property>
+		<property name="centroAlumno">
+			<ref bean="centro1" />
+		</property>
+		<property name="asignatura">
+			<ref bean="Inglés B1" />
+		</property>
+	</bean>
+	<bean id="Benito Bueno" class="es.studium.spring.Alumnos">
+		<property name="nombreAlumno" value="Benito Bueno"></property>
+		<property name="direccionAlumno" value="Reyes Católicos, 16"></property>
+		<property name="numeroMatricula" value="2"></property>
+		<property name="notaAsignatura" value="6"></property>
+		<property name="horasAsignatura" value="1"></property>
+		<property name="centroAlumno">
+			<ref bean="centro1" />
+		</property>
+		<property name="asignatura">
+			<ref bean="Inglés B2" />
+		</property>
+	</bean>
+	<bean id="Carmen Cano" class="es.studium.spring.Alumnos">
+		<property name="nombreAlumno" value="Carmen Cano"></property>
+		<property name="direccionAlumno" value="Reyes Católicos, 2"></property>
+		<property name="numeroMatricula" value="3"></property>
+		<property name="notaAsignatura" value="5"></property>
+		<property name="horasAsignatura" value="1"></property>
+		<property name="centroAlumno">
+			<ref bean="centro1" />
+		</property>
+		<property name="asignatura">
+			<ref bean="Inglés B1" />
+		</property>
+	</bean>
+	<bean id="Esteban Escalera" class="es.studium.spring.Alumnos">
+		<property name="nombreAlumno" value="Esteban Escalera"></property>
+		<property name="direccionAlumno"
+			value="Isabel la Católica, 28"></property>
+		<property name="numeroMatricula" value="4"></property>
+		<property name="notaAsignatura" value="9"></property>
+		<property name="horasAsignatura" value="1"></property>
+		<property name="centroAlumno">
+			<ref bean="centro2" />
+		</property>
+		<property name="asignatura">
+			<ref bean="Francés B1" />
+		</property>
+	</bean>
+	<bean id="Francisco Farfan" class="es.studium.spring.Alumnos">
+		<property name="nombreAlumno" value="Francisco Farfán"></property>
+		<property name="direccionAlumno" value="Cristóbal Colón, s/n"></property>
+		<property name="numeroMatricula" value="5"></property>
+		<property name="notaAsignatura" value="8.5"></property>
+		<property name="horasAsignatura" value="1"></property>
+		<property name="centroAlumno">
+			<ref bean="centro2" />
+		</property>
+		<property name="asignatura">
+			<ref bean="Francés A2" />
+		</property>
+	</bean>
+
+	<bean id="Inglés B1" class="es.studium.spring.Asignaturas">
+		<property name="codAsignatura" value="1"></property>
+		<property name="asignatura" value="Inglés B1"></property>
+	</bean>
+	<bean id="Inglés B2" class="es.studium.spring.Asignaturas">
+		<property name="codAsignatura" value="2"></property>
+		<property name="asignatura" value="Inglés B2"></property>
+	</bean>
+	<bean id="Francés B1" class="es.studium.spring.Asignaturas">
+		<property name="codAsignatura" value="3"></property>
+		<property name="asignatura" value="Francés B1"></property>
+	</bean>
+	<bean id="Francés A2" class="es.studium.spring.Asignaturas">
+		<property name="codAsignatura" value="4"></property>
+		<property name="asignatura" value="Francés A2"></property>
+	</bean>
+
+	<bean id="centro1" class="es.studium.spring.Centros">
+		<property name="codCentro" value="1"></property>
+		<property name="nombreCentro" value="Escuela de inglés "></property>
+		<property name="direccionCentro" value="Reyes Católicos, 14"></property>
+		<property name="alumnosCentro">
+			<list>
+				<ref bean="Ana Abel" />
+				
+				<ref bean="Benito Bueno" />
+				
+				<ref bean="Carmen Cano" />
+				
+			</list>
+		</property>
+	</bean>
+	<bean id="centro2" class="es.studium.spring.Centros">
+		<property name="codCentro" value="2"></property>
+		<property name="nombreCentro" value="Escuela de francés"></property>
+		<property name="direccionCentro" value="Cristóbal Colón, 92"></property>
+		<property name="alumnosCentro">
+			<list>
+				<ref bean="Esteban Escalera" />
+				
+				<ref bean="Francisco Farfan" />
+				
+			</list>
+		</property> 
+	</bean>
+</beans>
