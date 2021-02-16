@@ -142,6 +142,10 @@ public class Alumnos {
 	public String toString() {
 		return "Nombre Alumno=" + nombreAlumno + " Asignatura=" + asignatura;
 	}
+	/**
+	 * 
+	 * @return centroAlumno.getDireccionCentro() Optiene la dirección del centro 
+	 */
 	public String getDireccionCentro() {
 		return centroAlumno.getDireccionCentro();
 	}

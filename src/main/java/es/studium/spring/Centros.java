@@ -95,6 +95,6 @@ public class Centros {
 	}
 	@Override
 	public String toString() {
-		return "Nombre del Centro=" + nombreCentro + ", Dirección del Centro="+direccionCentro+ ", Alumnos del Centro=" + alumnoCentro;
+		return "Nombre del Centro=" + nombreCentro + ", Dirección del Centro="+direccionCentro;
 	}
 }
